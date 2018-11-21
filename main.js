@@ -3,7 +3,12 @@ var newAllButton, newNameButton, newHistoryButton;
 
 var langIS = true;
 
+var traceryGrammar;
+
+
 document.addEventListener("DOMContentLoaded", function(){
+
+	
 	
 	newAllButton = document.getElementById("newAll");
 	newAllButton.addEventListener("click", newAll);
@@ -108,6 +113,9 @@ function newHistory(){
 
 	
 
+	traceryGrammar = tracery.createGrammar(grammar);
+	
+	history += traceryGrammar.createFlattened();
 	
 
 
